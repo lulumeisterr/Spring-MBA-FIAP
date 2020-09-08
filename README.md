@@ -32,3 +32,12 @@
                 String getProperty(@RequestParam("property") String properties) {
                   return env.getProperty(properties);
                 }
+                
+                
+# Bean  
+  - Instancia do objeto gerenciada do spring possibilita usar instancias de referencias de outras bibliotecas podendo editar e utilizar
+  - Todo objeto que criamos via injecao de dependencia vai ser Singleton(Sempre vai existir apenas uma instancia desse objeto)
+  
+            @Service -> Trata regra de negocios (Indicativo que trabalhamos em regra de negocio) -> Sempre que vc estive uma service deve criar-se uma interface
+          @Component -> realiza o mesmo procedimento do Service porem é generica
+          @Repository -> Componente que vai realizar interacoes com dados , gravacao / leitura
