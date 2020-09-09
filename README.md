@@ -1,7 +1,7 @@
 # Spring-MBA-FIAP
 
 
-# BeanConfiguration
+# ConditionalBean
 
   - Nem sempre vamos querer que uma classe seja instanciada ou um endpoint fique disponivel entao podemos dizer com quais condicoes
   esse endpoint pode ser acessado podendo ser por properties etc ..
@@ -34,7 +34,7 @@
                 }
                 
                 
-# Bean  
+# BeanConfiguration  
   - Instancia do objeto gerenciada do spring possibilita usar instancias de referencias de outras bibliotecas podendo editar e utilizar
   - Todo objeto que criamos via injecao de dependencia vai ser Singleton(Sempre vai existir apenas uma instancia desse objeto)
   
