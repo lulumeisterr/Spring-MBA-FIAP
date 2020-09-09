@@ -1,7 +1,7 @@
 # Spring-MBA-FIAP
 
 
-#BeanConfiguration
+# BeanConfiguration
 
   - Nem sempre vamos querer que uma classe seja instanciada ou um endpoint fique disponivel entao podemos dizer com quais condicoes
   esse endpoint pode ser acessado podendo ser por properties etc ..
@@ -42,7 +42,16 @@
           @Component -> realiza o mesmo procedimento do Service porem é generica
           @Repository -> Componente que vai realizar interacoes com dados , gravacao / leitura
           
- 
+# Audit
+  Auditoria de quem criou ou editou uma entidade e quando essas alterações aconteceram.
+  
+# Banco h2
+  - Macos : jdbc:h2:~/fiapstockdatabase;DB_CLOSE_ON_EXIT=FALSE
+  - Windows : jdbc:h2:file:/home/#userexemplo/fiapstockdatabase
+  
+# Flyway
+
+  Funcionalidade : Acompanhar versionamento da base de dados apartir de migrations e mantem a consistencia do banco de dados
  
 # ApplicationContext
 
@@ -50,6 +59,6 @@
     Instancia todas as classes ao inciiarlizar a apliacacao
 
 # Swagger V3
- - http://localhost:8081/swagger-ui/index.html#/debugger-controller/getPropertyUsingGET
+ - http://localhost:8081/swagger-ui/index.html
  
  
