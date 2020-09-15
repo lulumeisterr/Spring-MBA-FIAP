@@ -43,20 +43,22 @@
           @Repository -> Componente que vai realizar interacoes com dados , gravacao / leitura
           
 # Audit
-  Auditoria de quem criou ou editou uma entidade e quando essas alterações aconteceram.
+    Auditoria de quem criou ou editou uma entidade e quando essas alterações aconteceram.
   
-# Banco h2
-  - Macos : jdbc:h2:~/fiapstockdatabase;DB_CLOSE_ON_EXIT=FALSE
-  - Windows : jdbc:h2:file:/home/#userexemplo/fiapstockdatabase
+# H2
+    - Macos : jdbc:h2:~/fiapstockdatabase;DB_CLOSE_ON_EXIT=FALSE
+    - Windows : jdbc:h2:file:/home/#userexemplo/fiapstockdatabase
+    - H2 Console : http://localhost:8081/h2-console/
   
 # Flyway
 
-  Funcionalidade : Acompanhar versionamento da base de dados apartir de migrations e mantem a consistencia do banco de dados
+    Funcionalidade : Acompanhar versionamento da base de dados apartir de migrations e mantem a consistencia do banco de dados
  
 # ApplicationContext
 
-      ApplicationContext -> extensao do beanFeactory , Sempre Eager , cria e valida todas as instancias quando a apliacacao sobe.
-    Instancia todas as classes ao inciiarlizar a apliacacao
+      ApplicationContext -> extensao do beanFeactory , Sempre Eager , cria e valida todas as instancias 
+      quando a apliacacao sobe. 
+      Instancia todas as classes ao inciiarlizar a apliacacao
 
 # Swagger V3
  - http://localhost:8081/swagger-ui/index.html
