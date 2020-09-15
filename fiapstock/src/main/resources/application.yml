@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 3000
  
 fiap:
   debug: true
@@ -13,6 +13,13 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create-drop
+      
+#  security:
+#    user:
+#      name: admin
+#      password: fiap123
+#      roles: ADMIN
+
   h2:
     console:
       path: /h2-console
@@ -20,6 +27,5 @@ spring:
         trace: false
         web-allow-others: false
       enabled: true
-  
-
+ 
       
