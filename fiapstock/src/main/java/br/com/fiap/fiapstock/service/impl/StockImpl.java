@@ -3,7 +3,9 @@ package br.com.fiap.fiapstock.service.impl;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import br.com.fiap.fiapstock.dto.StockCreateUpdateDTO;
 import br.com.fiap.fiapstock.dto.StockDTO;
@@ -57,14 +59,40 @@ public class StockImpl implements StockService{
 	
 	@Override
 	public StockDTO findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Stock stock = getStockById(id);
+		return new StockDTO(stock);
 	}
 
+
 	@Override
-	public StockDTO update(StockCreateUpdateDTO createUpdateDTO, long id) {
-		// TODO Auto-generated method stub
-		return null;
+	public StockDTO update(StockCreateUpdateDTO createUpdateDTO, long id) {		
+		Stock stock = getStockById(id);
+
+		stock.setNome(createUpdateDTO.getNome());
+		stock.setDescricao(createUpdateDTO.getDescricao());
+		stock.setValor(createUpdateDTO.getValor());
+		Stock savedStock = stockRepository.save(stock);		
+		return new StockDTO(savedStock);
 	}
+	
+
+	@Override
+	public void delete(Long id) {
+		Stock stock = getStockById(id);
+		stock.setAtivo(false);
+		stockRepository.save(stock);
+		
+	}
+	
+	/**
+	 * Trata o findById e devolve um erro caso ocorra algo
+	 * @param id
+	 * @return
+	 */
+	private Stock getStockById(Long id) {
+		return stockRepository.findByIdAndAtivoIsTrue(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+	}
+
+
 
 }

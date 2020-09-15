@@ -8,6 +8,7 @@ import br.com.fiap.fiapstock.dto.StockCreateUpdateDTO;
 public interface StockService {
 	 
 	List<StockDTO> findall(String search);
+	void delete(Long id);
 	StockDTO findById(Long id);
 	StockDTO create(StockCreateUpdateDTO createUpdateDTO);
 	StockDTO update (StockCreateUpdateDTO createUpdateDTO, long id);
