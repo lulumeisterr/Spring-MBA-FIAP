@@ -19,7 +19,6 @@ spring:
 #      name: admin
 #      password: fiap123
 #      roles: ADMIN
-
   h2:
     console:
       path: /h2-console
@@ -27,5 +26,10 @@ spring:
         trace: false
         web-allow-others: false
       enabled: true
+      
+      
+jwt:
+  secret: f1aps3cr3t
+  expire: 5
  
       
