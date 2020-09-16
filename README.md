@@ -52,7 +52,13 @@
   
   
 # Spring Security + JWT
+     
+     JWT), é um padrão que define uma forma segura de transmitir mensagens utilizando um token compacto e self-contained no formato de um objeto JSON.
+    
     - Camada de segurança
+    - Passar um header com KEY : Authorization , Bearer {token}
+    - Exemplo : Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmaWFwIiwiZXhwIjoxNjAwMjI3NjAxLCJpYXQiOjE2MDAyMjczMDF9.rpFFgxEkckMpdLmrcaPtwRzQv0-lZgLnF5hZei9ffT9A2wXrce_Z9GOImVbWfzebbf5rFRsfMbAQ_TpJqoqYAg
+    
     
 # Flyway
 
