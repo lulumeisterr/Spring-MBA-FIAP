@@ -50,6 +50,17 @@
     - Windows : jdbc:h2:file:/home/#userexemplo/fiapstockdatabase
     - H2 Console : http://localhost:8081/h2-console/
   
+  
+# Spring Security + JWT
+     
+     JWT), é um padrão que define uma forma segura de transmitir mensagens 
+     utilizando um token compacto e self-contained no formato de um objeto JSON.
+    
+    - Camada de segurança
+    - Passar um header com KEY : Authorization , Bearer {token}
+    - Exemplo : Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmaWFwIiwiZXhwIjoxNjAwMjI3NjAxLCJpYXQiOjE2MDAyMjczMDF9.rpFFgxEkckMpdLmrcaPtwRzQv0-lZgLnF5hZei9ffT9A2wXrce_Z9GOImVbWfzebbf5rFRsfMbAQ_TpJqoqYAg
+    
+    
 # Flyway
 
     Funcionalidade : Acompanhar versionamento da base de dados apartir de migrations e mantem a consistencia do banco de dados
