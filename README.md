@@ -50,6 +50,10 @@
     - Windows : jdbc:h2:file:/home/#userexemplo/fiapstockdatabase
     - H2 Console : http://localhost:8081/h2-console/
   
+  
+# Spring Security + JWT
+    - Camada de segurança
+    
 # Flyway
 
     Funcionalidade : Acompanhar versionamento da base de dados apartir de migrations e mantem a consistencia do banco de dados
