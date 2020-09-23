@@ -81,6 +81,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         http.httpBasic()
                 .and()
                 .authorizeRequests()
+                
                 .antMatchers("/users/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
@@ -115,14 +116,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	 */
 	
 	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.ignoring()
-		.antMatchers(
-				"/v3/api-docs",
-				"/configuration/ui",
-				"/swagger-resources/***",
-				"/configuration/security", 
-				"/swagger-ui/**",
-				"/webjars/**");
-	}
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring()
+                .antMatchers(
+                        "/v3/api-docs",
+                        "/configuration/ui",
+                        "/swagger-resources/**",
+                        "/configuration/security",
+                        "/swagger-ui/**",
+                        "/webjars/**"
+                );
+    }
 }
